@@ -6,5 +6,173 @@
 </head>
 <body>
    <h1>Un Super Titre !</h1>
+
+   <!-- COMMENTAIRES -->
+   <!-- 
+bater@TCP MINGW64 /c/wamp/www/projectgit (main)
+$ git status
+On branch main
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   document.txt
+        new file:   index.html
+
+
+bater@TCP MINGW64 /c/wamp/www/projectgit (main)
+$ git commit -m "Ajout du fichier index"
+[main ba71aac] Ajout du fichier index
+ 2 files changed, 1 insertion(+), 1 deletion(-)
+ create mode 100644 index.html
+
+bater@TCP MINGW64 /c/wamp/www/projectgit (main)
+$ touch style.css
+
+bater@TCP MINGW64 /c/wamp/www/projectgit (main)
+$ git status
+On branch main
+Untracked files:
+  (use "git add <file>..." to include in what will be committed)
+        style.css
+
+nothing added to commit but untracked files present (use "git add" to track)
+
+bater@TCP MINGW64 /c/wamp/www/projectgit (main)
+$ git add style.css
+
+bater@TCP MINGW64 /c/wamp/www/projectgit (main)
+$ git status
+On branch main
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   style.css
+
+
+bater@TCP MINGW64 /c/wamp/www/projectgit (main)
+$ git status
+On branch main
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        new file:   style.css
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        deleted:    document.txt
+        modified:   index.html
+        modified:   style.css
+
+
+bater@TCP MINGW64 /c/wamp/www/projectgit (main)
+$ git add index.html style.css
+
+bater@TCP MINGW64 /c/wamp/www/projectgit (main)
+$ git status
+On branch main
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   index.html
+        new file:   style.css
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        deleted:    document.txt
+
+
+bater@TCP MINGW64 /c/wamp/www/projectgit (main)
+$ dir document.txt
+dir: cannot access 'document.txt': No such file or directory
+
+bater@TCP MINGW64 /c/wamp/www/projectgit (main)
+$ rm document.css
+rm: cannot remove 'document.css': No such file or directory
+
+bater@TCP MINGW64 /c/wamp/www/projectgit (main)
+$ rm document.txt
+rm: cannot remove 'document.txt': No such file or directory
+
+bater@TCP MINGW64 /c/wamp/www/projectgit (main)
+$ git status
+On branch main
+Changes to be committed:
+  (use "git restore --staged <file>..." to unstage)
+        modified:   index.html
+        new file:   style.css
+
+Changes not staged for commit:
+  (use "git add/rm <file>..." to update what will be committed)
+  (use "git restore <file>..." to discard changes in working directory)
+        deleted:    document.txt
+
+
+bater@TCP MINGW64 /c/wamp/www/projectgit (main)
+$ git commit -m "Ajout des fichiers html et css"
+[main d70137e] Ajout des fichiers html et css
+ 2 files changed, 13 insertions(+)
+ create mode 100644 style.css
+
+bater@TCP MINGW64 /c/wamp/www/projectgit (main)
+$
+
+bater@TCP MINGW64 /c/wamp/www/projectgit (main)
+$ git remote add origin https://github.com/Egide92/projectgit.git
+error: remote origin already exists.
+
+bater@TCP MINGW64 /c/wamp/www/projectgit (main)
+$ git branch -M main
+
+bater@TCP MINGW64 /c/wamp/www/projectgit (main)
+$ git push -u origin main
+
+
+Enumerating objects: 13, done.
+Counting objects: 100% (13/13), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (7/7), done.
+Writing objects: 100% (13/13), 1.12 KiB | 37.00 KiB/s, done.
+Total 13 (delta 0), reused 0 (delta 0), pack-reused 0
+To https://github.com/Egide92/projetgit.git
+ * [new branch]      main -> main
+branch 'main' set up to track 'origin/main'.
+
+bater@TCP MINGW64 /c/wamp/www/projectgit (main)
+$
+
+bater@TCP MINGW64 /c/wamp/www/projectgit (main)
+$
+
+bater@TCP MINGW64 /c/wamp/www/projectgit (main)
+$ git add index.html
+
+bater@TCP MINGW64 /c/wamp/www/projectgit (main)
+$ git commit -m "Ajout sur fichier html"
+[main b838c78] Ajout sur fichier html
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+
+bater@TCP MINGW64 /c/wamp/www/projectgit (main)
+$ git branch -M main
+
+bater@TCP MINGW64 /c/wamp/www/projectgit (main)
+$ git push -u origin main
+Enumerating objects: 5, done.
+Counting objects: 100% (5/5), done.
+Delta compression using up to 4 threads
+Compressing objects: 100% (3/3), done.
+Writing objects: 100% (3/3), 383 bytes | 191.00 KiB/s, done.
+Total 3 (delta 1), reused 0 (delta 0), pack-reused 0
+remote: Resolving deltas: 100% (1/1), completed with 1 local object.
+To https://github.com/Egide92/projetgit.git
+   d70137e..b838c78  main -> main
+branch 'main' set up to track 'origin/main'.
+
+bater@TCP MINGW64 /c/wamp/www/projectgit (main)
+$ git add index.html
+
+bater@TCP MINGW64 /c/wamp/www/projectgit (main)
+$ git commit -m "Ajout sur fichier html"
+[main b838c78] Ajout sur fichier html
+ 1 file changed, 1 insertion(+), 1 deletion(-)
+-->
+
 </body>
 </html>
